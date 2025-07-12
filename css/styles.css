@@ -65,8 +65,8 @@ header ul li a {
 }
 
 header ul li a:hover {
-  color: #1e90ff;
-  text-shadow: 0 0 5px #1e90ff;
+  color: rgba(15, 255, 80, 0.5);
+  text-shadow: 0 0 5px rgba(15, 255, 80, 0.5);
 }
 
 main {
