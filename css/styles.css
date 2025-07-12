@@ -1,0 +1,441 @@
+/* Reset */
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Altura total para body e html */
+html, body {
+    height: 100%;
+}
+
+/* Fundo do site */
+body {
+    background-color: #1e1e1e;
+    font-family: Arial, sans-serif;
+    color: white;
+    font-family: monospace;
+}
+
+/* Cabeçalho fixo no topo */
+header {
+    width: 100%;
+    height: 60px;
+    background-color: #1b1b1b;
+    border-bottom: 2px solid #222222;
+}
+
+main {
+    overflow: hidden;
+}
+
+/* Estilo das seções */
+section {
+    width: 100%;
+    max-width: 1000px;
+    margin: 4rem auto;
+    padding: 1rem;
+}
+
+h1, h2, p {
+    color: #0FFF50;
+}
+
+h1 {
+    font-size: 32px;
+    font-style: italic;
+}
+
+
+/* Seção do 404 */
+#container-welcome {
+    height: 400px;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
+}
+
+#container-welcome h1 {
+    text-align: center;
+    color: white;
+    font-family: "Pixelify Sans", monospace;
+    font-size: 24px;
+    width: 11ch; /* Ajuste isso ao número real de caracteres */
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid white;
+
+    animation: typing 3s steps(11), blink 0.5s step-end infinite alternate;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 11ch; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+/* Seção sobre */
+#container-about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 5rem;
+    line-height: 24px;
+    text-align: justify;
+}
+
+#container-about h2, p {
+    color: white;
+    margin-top: 10px;
+}
+
+#container-about p {
+    font-weight: lighter;
+    font-size: 12px;
+}
+
+#container-about #div-img {
+    background-color: white;
+    padding: 1rem;
+    padding-bottom: 5rem;
+    display: inline-block;
+    border: 1px solid #f6f6f6;
+    backdrop-filter: blur(10px);
+    transform: rotate(7deg);
+}
+
+#container-about #div-img img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+}
+
+#container-about #group-about {
+    flex: 1;
+    min-width: 200px;
+}
+
+.cardSocialMedia {
+    background-color: #1c1c1c;
+    height: 40px;
+    margin-top: 10px;
+    padding: 0 8px;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.cardSocialMedia:hover {
+    transform: scale(1.1);
+}
+
+.cardSocialMedia div {
+    width: 40px;
+    height: 100%;
+    border-right: 1px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+.cardSocialMedia p, a {
+    color: white;
+    margin: auto 1rem;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#cardEmail:hover {
+    box-shadow: 0 0 10px rgba(250, 237, 1, 0.997);
+}
+
+
+/* Seção de skills */
+#container-skills #group-cards-skill {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    padding: 2rem 1px;
+}
+
+.cardSkill {
+    background-color: #1c1c1c;
+    backdrop-filter: blur(100px);
+    width: 100%;
+    max-width: 200px;
+    padding: 5px;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 8px rgba(39, 39, 39, 0.5);
+}
+
+
+
+.cardSkill:hover {
+    transform: scale(1.05);
+}
+
+.skillfront:hover {
+    box-shadow: 0 0 10px rgba(207, 15, 255, 0.5);
+}
+
+.skillback:hover {
+    box-shadow: 0 0 10px rgba(15, 251, 255, 0.5);
+}
+
+.skilltool:hover {
+    box-shadow: 0 0 10px rgba(255, 15, 15, 0.5);
+}
+
+.cardSkill .divIcon {
+    width: 80px;
+    height: 50px;
+    border-right: 1px solid #272727;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+.cardSkill p {
+    margin: auto;
+    color: white;
+    font-size: 1rem;
+}
+
+/* Seção projetos */
+#container-projects #group-cards-projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    justify-items: center;
+    padding: 2rem 1rem;
+}
+
+.cardProject {
+    background-color: #1c1c1c;
+    width: 100%;
+    max-width: 300px;
+    padding: 0.8rem;
+    border-radius: 10px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    box-shadow: 0 0 8px rgba(39, 39, 39, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+.cardProject:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 10px rgba(15, 255, 80, 0.5);
+}
+
+.cardProject .divImg {
+    background-color: #2b2b2b;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.cardProject .divImg i:hover {
+    color: #0f0;
+}
+
+.cardProject .nameProject {
+    margin-top: 10px;
+    margin-left: 15px;
+    font-size: 1rem;
+    word-break: break-word;
+    color: white;
+}
+
+.cardProject .dataProject {
+    margin-right: 15px;
+    text-align: end;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+
+/* FOOTER */
+footer {
+    position: relative;
+    width: 100%;
+    background-color: #1b1b1b;
+    border-top: 2px solid #222222;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 2rem 1rem;
+    gap: 2rem;
+}
+
+/* Temperatura */
+#container-temp {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 1rem;
+    border-radius: 10px;
+    transition: ease 0.3s;
+    gap: 0.5rem;
+    user-select: none;
+}
+
+#container-temp:hover {
+    transform: scale(1.05);
+    background-color: #232323;
+    box-shadow: 0 0 10px rgba(250, 237, 1, 0.997);
+}
+
+.icon-wrapper {
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+
+.icon-wrapper img {
+    width: 100%;
+    height: 100%;
+}
+
+.temp-number {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    padding: 2px 4px;
+    border-radius: 5px;
+}
+
+#container-temp span {
+    font-size: 14px;
+    color: white;
+}
+
+
+
+/* MODAL */
+#modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(2px);
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#modal.hidden {
+    display: none;
+}
+
+#modalOverlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+/* Conteúdo do modal (formulário) */
+#modalContent {
+    position: relative;
+    background-color: #232323;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    animation: fadeIn 0.3s ease;
+    z-index: 1001;
+}
+
+#modalContent form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#modalContent form h2 {
+    margin: 0;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
+
+#modalContent input,
+#modalContent textarea {
+    padding: 0.7rem 1rem;
+    border: none;
+    border-radius: 5px;
+    resize: vertical;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+#modalContent button[type="submit"] {
+    background-color: white;
+    color: rgb(17, 221, 71);
+    border: 1px solid rgba(15, 255, 80, 1);
+    font-weight: bold;
+    padding: 0.7rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#modalContent button:hover {
+    background-color: rgba(15, 255, 80, 0.5);
+    color: white;
+    border: 1px solid rgba(15, 255, 80, 0.5);
+}
+
+/* Botão "X" para fechar o modal */
+#closeModalBtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* Animação */
+@keyframes fadeIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
