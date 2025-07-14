@@ -10,6 +10,7 @@
 /* Altura total para body e html */
 html, body {
     height: 100%;
+    scroll-behavior: smooth;
 }
 
 /* Fundo do site */
